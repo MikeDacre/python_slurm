@@ -1,5 +1,5 @@
 dill>=0.2.5
-fyrd>=0.6.1b3
+tabulate>=0.7.7
 pytest>=3.0.3
 pytest-cov>=2.4.0
 coverage>=3.7.1
