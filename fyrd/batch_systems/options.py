@@ -159,11 +159,15 @@ TORQUE = _OD()
 #  from: http://slurm.schedmd.com/pdfs/summary.pdf  #
 #####################################################
 
-SLURM  = _OD([
+SLURM = _OD([
     ('begin',
      {'help': 'Start after this much time',
       'slurm': '--begin={}', 'type': str,
       'default': None}),
+    ('uid',
+     {'help': 'Attempt to submit and/or run a job as user instead',
+      'slurm': '--uid={}', 'type': str,
+      'default': None})
 ])
 
 ################################################################
