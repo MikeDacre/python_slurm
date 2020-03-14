@@ -51,3 +51,5 @@ export:        Comma separated list of environmental variables to export
 Used for slurm only::
 begin:         Start after this much time
                Type: str; Default: None
+uid:           Attempt to submit and/or run a job as user instead
+               Type: str; Default: None
