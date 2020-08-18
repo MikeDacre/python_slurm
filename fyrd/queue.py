@@ -160,6 +160,8 @@ class Queue(object):
         )
         self.sleep_len = float(_conf.get_option('queue', 'sleep_len', 0.5))
 
+        self.res_time = float(_conf.get_option('queue', 'res_time', 2700))
+
         # Set type
         if qtype:
             _batch.check_queue(qtype)
@@ -290,7 +292,7 @@ class Queue(object):
                     lgd      = False
                     lgd2     = False
                     start    = _dt.now()
-                    res_time = float(_conf.get_option('queue', 'res_time'))
+                    res_time = self.res_time
                     count    = 0
                     # Get job state
                     job_state = self.jobs[job_id].state
